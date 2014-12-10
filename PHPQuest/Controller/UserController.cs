@@ -9,5 +9,9 @@ namespace PHPQuest.Controller
     class UserController
     {
         string namn;
+        string AverageTestate = "AverageTestate";
+        List<String> AverageTestatete = new List<String>() {"AverageTestae", "AverageTestate"};
+        
+
     }
 }

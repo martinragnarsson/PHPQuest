@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{544B064B-E29F-478D-A121-011CD6332720}</ProjectGuid>
+    <ProjectGuid>{0B1B7A0C-85E2-48EB-BA17-7321DC20BC4B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PHPQuest</RootNamespace>
-    <AssemblyName>PHPQuest</AssemblyName>
+    <RootNamespace>Glosor2</RootNamespace>
+    <AssemblyName>Glosor2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,21 +47,19 @@
     <Compile Include="AddWords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddWords.designer.cs">
+    <Compile Include="AddWords.Designer.cs">
       <DependentUpon>AddWords.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.cs" />
     <Compile Include="PopupAddWords.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PopupAddWords.designer.cs">
+    <Compile Include="PopupAddWords.Designer.cs">
       <DependentUpon>PopupAddWords.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -96,9 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Glosor2.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
