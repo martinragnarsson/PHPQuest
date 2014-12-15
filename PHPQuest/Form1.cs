@@ -94,11 +94,13 @@ namespace Glosor2
                 points = 0;
             }
             if (comboBox1.SelectedIndex == 2)
-            {///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                int save = Convert.ToInt32(System.IO.File.ReadAllText(@"F:\Glosor2\Save.txt"));
+            {////////////////////////////////////////////////////////////////
+
+                string topkek = System.IO.File.ReadAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt");
+                int save = Convert.ToInt32(topkek);
                 save++;
 
-                System.IO.File.WriteAllText(@"F:\Glosor2\Save.txt", save.ToString());
+                System.IO.File.WriteAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt", save.ToString());
                 if (förstasparningen)
                 {
                     save = 1;
@@ -106,9 +108,9 @@ namespace Glosor2
                 }
                 else
                 {
-                    save = Convert.ToInt32(System.IO.File.ReadAllText(@"F:\Glosor2\Save.txt"));
+                    save = Convert.ToInt32(System.IO.File.ReadAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt"));
                 }
-                System.IO.File.WriteAllText(@"F:\Glosor2\Resultat.txt", "\n" + "Testnr: " + save + " " + "Points: " + points);
+                System.IO.File.WriteAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Resultat.txt", "\n" + "Testnr: " + save + " " + "Points: " + points);
             }
         }
 
