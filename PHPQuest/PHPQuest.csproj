@@ -51,6 +51,7 @@
       <DependentUpon>AddWords.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\WordList.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Word.cs" />
     <Compile Include="PopupAddWords.cs">
       <SubType>Form</SubType>
     </Compile>

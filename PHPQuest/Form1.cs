@@ -31,8 +31,6 @@ namespace Glosor2
         PopupAddWords popup = new PopupAddWords();
         AddWords popup2;
 
-
-
         public Form1()
         {
             popup2 = new AddWords(this);
