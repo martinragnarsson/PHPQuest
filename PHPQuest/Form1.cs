@@ -22,8 +22,8 @@ namespace Glosor2
         int points = 0;
         
 
-        public List<string> Språk1 = new List<string> { "top", "kek" };
-        public List<string> Språk2 = new List<string> { "kek", "top" };
+        public List<string> Språk1 = new List<string> { "top", "kek", "hej", "hejdå", "hund", "katt", "dator", "cykel", "skola", "klocka"};
+        public List<string> Språk2 = new List<string> { "kek", "top", "hello", "goodbye", "dog", "cat", "computer", "bike", "school", "clock"};
 
         public List<string> Språk3 = new List<string> { "leao" };
         public List<string> Språk4 = new List<string> { "oael" };
