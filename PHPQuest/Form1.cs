@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using PHPQuest.Controller;
 
-namespace Glosor2
+namespace PHPQuest
 {
     public partial class Form1 : Form
     {
@@ -20,13 +21,9 @@ namespace Glosor2
         int i = 20;
         int n = 0;
         int points = 0;
-        
 
-        public List<string> Språk1 = new List<string> { "top", "kek", "hej", "hejdå", "hund", "katt", "dator", "cykel", "skola", "klocka", "stol", "bord", "mask", "fiska", "båt", };
-        public List<string> Språk2 = new List<string> { "kek", "top", "hello", "goodbye", "dog", "cat", "computer", "bike", "school", "clock", "chair", "table", "worm", "fish", "boat"};
 
-        public List<string> Språk3 = new List<string> { "leao" };
-        public List<string> Språk4 = new List<string> { "oael" };
+        WordList wordList;
 
         PopupAddWords popup = new PopupAddWords();
         AddWords popup2;
@@ -34,7 +31,7 @@ namespace Glosor2
         public Form1()
         {
             popup2 = new AddWords(this);
-
+            wordList = new WordList();
             InitializeComponent();
             comboBox1.Cursor = Cursors.Default;
 
@@ -145,26 +142,26 @@ namespace Glosor2
             if (rightanswer)
             {
                 points++;
-                n = random.Next(0, Språk1.Count);
+                n = random.Next(0, wordList.Språk1.Count);
                 tbxAnswer.Clear();
                 rightanswer = false;
                 i = 20;
             }
             if (comboBox2.SelectedIndex == 0)
             {
-                lblWord.Text = Språk1[n];
+                lblWord.Text = wordList.Språk1[n];
             }
             if (comboBox2.SelectedIndex == 1)
             {
-                lblWord.Text = Språk2[n];
+                lblWord.Text = wordList.Språk2[n];
             }
             if (comboBox2.SelectedIndex == 2)
             {
-                lblWord.Text = Språk3[n];
+                lblWord.Text = wordList.Språk3[n];
             }
             if (comboBox2.SelectedIndex == 3)
             {
-                lblWord.Text = Språk4[n];
+                lblWord.Text = wordList.Språk4[n];
             }
             this.Update();
         }
@@ -181,28 +178,28 @@ namespace Glosor2
         {
             if (comboBox3.SelectedIndex == 0)
             {
-                if (tbxAnswer.Text == Språk1[n])
+                if (tbxAnswer.Text == wordList.Språk1[n])
                 {
                     rightanswer = true;
                 }
             }
             if (comboBox3.SelectedIndex == 1)
             {
-                if (tbxAnswer.Text == Språk2[n])
+                if (tbxAnswer.Text == wordList.Språk2[n])
                 {
                     rightanswer = true;
                 }
             }
             if (comboBox3.SelectedIndex == 2)
             {
-                if (tbxAnswer.Text == Språk3[n])
+                if (tbxAnswer.Text == wordList.Språk3[n])
                 {
                     rightanswer = true;
                 }
             }
             if (comboBox3.SelectedIndex == 3)
             {
-                if (tbxAnswer.Text == Språk4[n])
+                if (tbxAnswer.Text == wordList.Språk4[n])
                 {
                     rightanswer = true;
                 }

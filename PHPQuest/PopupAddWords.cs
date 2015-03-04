@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Glosor2
+namespace PHPQuest
 {
     public partial class PopupAddWords : Form
     {

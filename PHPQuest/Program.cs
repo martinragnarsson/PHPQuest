@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Glosor2
+namespace PHPQuest
 {
     static class Program
     {

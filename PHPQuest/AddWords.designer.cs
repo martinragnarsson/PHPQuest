@@ -1,4 +1,4 @@
-﻿namespace Glosor2
+﻿namespace PHPQuest
 {
     partial class AddWords
     {
