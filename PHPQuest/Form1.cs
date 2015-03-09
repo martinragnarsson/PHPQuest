@@ -212,5 +212,13 @@ namespace PHPQuest
         {
             DialogResult pleswork = popup2.ShowDialog();
         }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            this.tmrCount.Enabled = false;
+            tbxAnswer.ReadOnly = true;
+            i = 20;
+            lblCount.Text = i.ToString();
+        }
     }
 }

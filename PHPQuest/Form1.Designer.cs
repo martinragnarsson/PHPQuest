@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddworderinos = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCount
@@ -175,7 +176,7 @@
             // 
             // btnAddworderinos
             // 
-            this.btnAddworderinos.Location = new System.Drawing.Point(236, 3);
+            this.btnAddworderinos.Location = new System.Drawing.Point(279, 3);
             this.btnAddworderinos.Name = "btnAddworderinos";
             this.btnAddworderinos.Size = new System.Drawing.Size(75, 23);
             this.btnAddworderinos.TabIndex = 13;
@@ -183,11 +184,22 @@
             this.btnAddworderinos.UseVisualStyleBackColor = true;
             this.btnAddworderinos.Click += new System.EventHandler(this.btnAddworderinos_Click);
             // 
+            // btnStop
+            // 
+            this.btnStop.Location = new System.Drawing.Point(195, 3);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(75, 23);
+            this.btnStop.TabIndex = 14;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 308);
+            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnAddworderinos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -230,6 +242,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAddworderinos;
+        private System.Windows.Forms.Button btnStop;
     }
 }
 
