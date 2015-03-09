@@ -91,8 +91,8 @@ namespace PHPQuest
             if (comboBox1.SelectedIndex == 2)
             {////////////////////////////////////////////////////////////////
 
-                string topkek = System.IO.File.ReadAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt");
-                int save = Convert.ToInt32(topkek);
+                string saving = System.IO.File.ReadAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt");
+                int save = Convert.ToInt32(saving);
                 save++;
 
                 System.IO.File.WriteAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt", save.ToString());
