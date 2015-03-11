@@ -13,8 +13,8 @@ namespace PHPQuest
 {
     public partial class AddWords : Form
     {
-        Form1 form1;
-        public AddWords(Form1 form1)
+        TimeTest form1;
+        public AddWords(TimeTest form1)
         {
             InitializeComponent();
             this.form1 = form1;

@@ -12,7 +12,7 @@ using PHPQuest.Controller;
 
 namespace PHPQuest
 {
-    public partial class Form1 : Form
+    public partial class TimeTest : Form
     {
         Random random = new Random();
         bool rightanswer = false;
@@ -28,7 +28,7 @@ namespace PHPQuest
         PopupAddWords popup = new PopupAddWords();
         AddWords popup2;
 
-        public Form1()
+        public TimeTest()
         {
             popup2 = new AddWords(this);
             wordList = new WordList();
