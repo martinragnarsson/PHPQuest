@@ -14,16 +14,16 @@ namespace PHPQuest
 {
     public partial class FormMain : Form
     {
-        TimeTest tt = new TimeTest();
+        TimeTest tt;
         PopupAddWords popup = new PopupAddWords();
         AddWords popup2;
         public FormMain()
         {
             popup2 = new AddWords(tt);
-            InitializeComponent(); 
+            InitializeComponent();
 
 
-
+            this.tt = new TimeTest(this);
 
             this.popup2.cmbAddWords.Items.Add("Swedish");
             this.popup2.cmbAddWords.Items.Add("English");

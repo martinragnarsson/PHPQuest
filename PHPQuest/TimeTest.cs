@@ -21,15 +21,16 @@ namespace PHPQuest
         int i = 20;
         int n = 0;
         int points = 0;
-
+        FormMain fm;
 
         WordList wordList;
 
         PopupAddWords popup = new PopupAddWords();
         AddWords popup2;
 
-        public TimeTest()
+        public TimeTest(FormMain fm)
         {
+            this.fm = fm;
             popup2 = new AddWords(this);
             wordList = new WordList();
             InitializeComponent();
@@ -45,12 +46,12 @@ namespace PHPQuest
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(ComboBox1_DropDown);
 
 
-            this.comboBox2.Items.Add("Swedish");
-            this.comboBox2.Items.Add("English");
+            fm.comboBox2.Items.Add("Swedish");
+            fm.comboBox2.Items.Add("English");
 
 
-            this.comboBox3.Items.Add("Swedish");
-            this.comboBox3.Items.Add("English");
+            fm.comboBox3.Items.Add("Swedish");
+            fm.comboBox3.Items.Add("English");
 
 
             this.popup2.cmbAddWords.Items.Add("Swedish");
@@ -71,8 +72,8 @@ namespace PHPQuest
                 if (popup.textBox1.Text != string.Empty)
                 {
                     this.comboBox1.Items.Add(popup.textBox1.Text);
-                    this.comboBox2.Items.Add(popup.textBox1.Text);
-                    this.comboBox3.Items.Add(popup.textBox1.Text);
+                    fm.comboBox2.Items.Add(popup.textBox1.Text);
+                    fm.comboBox3.Items.Add(popup.textBox1.Text);
                     this.popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
                     this.popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
                     popup.textBox1.Clear();
@@ -147,19 +148,19 @@ namespace PHPQuest
                 rightanswer = false;
                 i = 20;
             }
-            if (comboBox2.SelectedIndex == 0)
+            if (fm.comboBox2.SelectedIndex == 0)
             {
                 lblWord.Text = wordList.Språk1[n];
             }
-            if (comboBox2.SelectedIndex == 1)
+            if (fm.comboBox2.SelectedIndex == 1)
             {
                 lblWord.Text = wordList.Språk2[n];
             }
-            if (comboBox2.SelectedIndex == 2)
+            if (fm.comboBox2.SelectedIndex == 2)
             {
                 lblWord.Text = wordList.Språk3[n];
             }
-            if (comboBox2.SelectedIndex == 3)
+            if (fm.comboBox2.SelectedIndex == 3)
             {
                 lblWord.Text = wordList.Språk4[n];
             }
@@ -168,41 +169,52 @@ namespace PHPQuest
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            tbxAnswer.BackColor = Color.White;
             if (e.KeyCode == Keys.Enter)
             {
+                if (!rightanswer)
+                {
+                    tbxAnswer.BackColor = Color.Red;
+                }
                 btnSend.PerformClick();
             }
+            
+            
         }
 
         public void btnSend_Click(object sender, EventArgs e)
         {
-            if (comboBox3.SelectedIndex == 0)
+            if (fm.comboBox3.SelectedIndex == 0)
             {
                 if (tbxAnswer.Text == wordList.Språk1[n])
                 {
                     rightanswer = true;
                 }
             }
-            if (comboBox3.SelectedIndex == 1)
+            if (fm.comboBox3.SelectedIndex == 1)
             {
                 if (tbxAnswer.Text == wordList.Språk2[n])
                 {
                     rightanswer = true;
                 }
             }
-            if (comboBox3.SelectedIndex == 2)
+            if (fm.comboBox3.SelectedIndex == 2)
             {
                 if (tbxAnswer.Text == wordList.Språk3[n])
                 {
                     rightanswer = true;
                 }
             }
-            if (comboBox3.SelectedIndex == 3)
+            if (fm.comboBox3.SelectedIndex == 3)
             {
                 if (tbxAnswer.Text == wordList.Språk4[n])
                 {
                     rightanswer = true;
                 }
+            }
+            if (rightanswer)
+            {
+                tbxAnswer.BackColor = Color.White;
             }
 
         }
@@ -219,6 +231,11 @@ namespace PHPQuest
             tbxAnswer.ReadOnly = true;
             i = 20;
             lblCount.Text = i.ToString();
+        }
+
+        private void TimeTest_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
