@@ -41,7 +41,6 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.btnAddworderinos = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblCount
@@ -143,17 +142,6 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1, 3);
-            this.comboBox1.MaxDropDownItems = 5;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
             // TimeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,7 +151,6 @@
             this.Controls.Add(this.btnAddworderinos);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.lblWord);
             this.Controls.Add(this.tbxAnswer);
@@ -195,7 +182,6 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnAddworderinos;
         private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

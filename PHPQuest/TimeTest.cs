@@ -34,16 +34,14 @@ namespace PHPQuest
             popup2 = new AddWords(this);
             wordList = new WordList();
             InitializeComponent();
-            comboBox1.Cursor = Cursors.Default;
+            fm.comboBox1.Cursor = Cursors.Default;
 
-            this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.comboBox1.Name = "File";
-            this.Controls.Add(this.comboBox1);
-            this.comboBox1.Items.Add("Add language");
-            this.comboBox1.Items.Add("Reset");
-            this.comboBox1.Items.Add("Save");
-            this.comboBox1.Text = "File";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(ComboBox1_DropDown);
+            fm.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            fm.Controls.Add(fm.comboBox1);
+            fm.comboBox1.Items.Add("Add language");
+            fm.comboBox1.Items.Add("Reset");
+            fm.comboBox1.Items.Add("Save");
+            fm.comboBox1.SelectedIndexChanged += new System.EventHandler(ComboBox1_DropDown);
 
 
             fm.comboBox2.Items.Add("Swedish");
@@ -65,13 +63,13 @@ namespace PHPQuest
         }
         private void ComboBox1_DropDown(object sender, System.EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (fm.comboBox1.SelectedIndex == 0)
             {
                 DialogResult dialogresult = popup.ShowDialog();
 
                 if (popup.textBox1.Text != string.Empty)
                 {
-                    this.comboBox1.Items.Add(popup.textBox1.Text);
+                    fm.comboBox1.Items.Add(popup.textBox1.Text);
                     fm.comboBox2.Items.Add(popup.textBox1.Text);
                     fm.comboBox3.Items.Add(popup.textBox1.Text);
                     this.popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
@@ -79,7 +77,7 @@ namespace PHPQuest
                     popup.textBox1.Clear();
                 }
             }
-            if (comboBox1.SelectedIndex == 1)
+            if (fm.comboBox1.SelectedIndex == 1)
             {
                 System.IO.File.WriteAllText(@"F:\Glosor2\Save.txt", string.Empty);
                 lblCount.Text = "20";
@@ -89,7 +87,7 @@ namespace PHPQuest
                 tbxAnswer.ReadOnly = true;
                 points = 0;
             }
-            if (comboBox1.SelectedIndex == 2)
+            if (fm.comboBox1.SelectedIndex == 2)
             {////////////////////////////////////////////////////////////////
 
                 string saving = System.IO.File.ReadAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt");
