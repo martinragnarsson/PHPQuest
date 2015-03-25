@@ -39,15 +39,15 @@
             this.lblPoints = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
-            this.btnAddworderinos = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
+            this.lblFel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCount
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(5, 34);
+            this.lblCount.Location = new System.Drawing.Point(12, 38);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(46, 31);
             this.lblCount.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.lblSeconds.AutoSize = true;
             this.lblSeconds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeconds.Location = new System.Drawing.Point(47, 44);
+            this.lblSeconds.Location = new System.Drawing.Point(54, 48);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(167, 20);
             this.lblSeconds.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // tbxAnswer
             // 
-            this.tbxAnswer.Location = new System.Drawing.Point(216, 219);
+            this.tbxAnswer.Location = new System.Drawing.Point(12, 144);
             this.tbxAnswer.Name = "tbxAnswer";
             this.tbxAnswer.ReadOnly = true;
             this.tbxAnswer.Size = new System.Drawing.Size(100, 20);
@@ -75,7 +75,7 @@
             // 
             this.lblWord.AutoSize = true;
             this.lblWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWord.Location = new System.Drawing.Point(224, 161);
+            this.lblWord.Location = new System.Drawing.Point(12, 125);
             this.lblWord.Name = "lblWord";
             this.lblWord.Size = new System.Drawing.Size(0, 16);
             this.lblWord.TabIndex = 4;
@@ -96,7 +96,7 @@
             // 
             this.lblPoints.AutoSize = true;
             this.lblPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPoints.Location = new System.Drawing.Point(233, 47);
+            this.lblPoints.Location = new System.Drawing.Point(12, 83);
             this.lblPoints.Name = "lblPoints";
             this.lblPoints.Size = new System.Drawing.Size(61, 18);
             this.lblPoints.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(107, 3);
+            this.btnStart.Location = new System.Drawing.Point(12, 12);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 7;
@@ -114,7 +114,7 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(230, 256);
+            this.btnSend.Location = new System.Drawing.Point(12, 170);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 8;
@@ -122,19 +122,9 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // btnAddworderinos
-            // 
-            this.btnAddworderinos.Location = new System.Drawing.Point(279, 3);
-            this.btnAddworderinos.Name = "btnAddworderinos";
-            this.btnAddworderinos.Size = new System.Drawing.Size(75, 23);
-            this.btnAddworderinos.TabIndex = 13;
-            this.btnAddworderinos.Text = "Add Words";
-            this.btnAddworderinos.UseVisualStyleBackColor = true;
-            this.btnAddworderinos.Click += new System.EventHandler(this.btnAddworderinos_Click);
-            // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(195, 3);
+            this.btnStop.Location = new System.Drawing.Point(100, 12);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 14;
@@ -142,13 +132,22 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
+            // lblFel
+            // 
+            this.lblFel.AutoSize = true;
+            this.lblFel.ForeColor = System.Drawing.Color.Red;
+            this.lblFel.Location = new System.Drawing.Point(119, 153);
+            this.lblFel.Name = "lblFel";
+            this.lblFel.Size = new System.Drawing.Size(0, 13);
+            this.lblFel.TabIndex = 15;
+            // 
             // TimeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 308);
+            this.ClientSize = new System.Drawing.Size(235, 232);
+            this.Controls.Add(this.lblFel);
             this.Controls.Add(this.btnStop);
-            this.Controls.Add(this.btnAddworderinos);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblPoints);
@@ -162,7 +161,6 @@
             this.MaximizeBox = false;
             this.Name = "TimeTest";
             this.Text = "Glosor";
-            this.Load += new System.EventHandler(this.TimeTest_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,8 +178,8 @@
         private System.Windows.Forms.Label lblPoints;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnAddworderinos;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Label lblFel;
     }
 }
 

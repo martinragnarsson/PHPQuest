@@ -21,6 +21,7 @@ namespace PHPQuest
         int i = 20;
         int n = 0;
         int points = 0;
+        int fel = 0;
         FormMain fm;
 
         WordList wordList;
@@ -79,7 +80,6 @@ namespace PHPQuest
             }
             if (fm.comboBox1.SelectedIndex == 1)
             {
-                System.IO.File.WriteAllText(@"F:\Glosor2\Save.txt", string.Empty);
                 lblCount.Text = "20";
                 i = 20;
                 this.tmrCount.Enabled = true;
@@ -143,8 +143,11 @@ namespace PHPQuest
                 points++;
                 n = random.Next(0, wordList.Språk1.Count);
                 tbxAnswer.Clear();
+                fel = 0;
+                lblFel.Text = "";
                 rightanswer = false;
                 i = 20;
+
             }
             if (fm.comboBox2.SelectedIndex == 0)
             {
@@ -162,6 +165,9 @@ namespace PHPQuest
             {
                 lblWord.Text = wordList.Språk4[n];
             }
+
+
+
             this.Update();
         }
 
@@ -176,8 +182,8 @@ namespace PHPQuest
                 }
                 btnSend.PerformClick();
             }
-            
-            
+
+
         }
 
         public void btnSend_Click(object sender, EventArgs e)
@@ -214,13 +220,18 @@ namespace PHPQuest
             {
                 tbxAnswer.BackColor = Color.White;
             }
+            if (!rightanswer)
+            {
+                fel++;
+            }
+            lblFel.Text = fel.ToString();
 
         }
 
 
         private void btnAddworderinos_Click(object sender, EventArgs e)
         {
-            DialogResult pleswork = popup2.ShowDialog();
+            DialogResult r = popup2.ShowDialog();
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -231,9 +242,5 @@ namespace PHPQuest
             lblCount.Text = i.ToString();
         }
 
-        private void TimeTest_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
