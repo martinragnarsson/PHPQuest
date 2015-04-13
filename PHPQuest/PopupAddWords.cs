@@ -16,5 +16,10 @@ namespace PHPQuest
         {
             InitializeComponent();            
         }
+
+        private void btnSet_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

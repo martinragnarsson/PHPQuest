@@ -53,11 +53,13 @@ namespace PHPQuest
             fm.comboBox3.Items.Add("English");
 
 
-            this.popup2.cmbAddWords.Items.Add("Swedish");
-            this.popup2.cmbAddWords.Items.Add("English");
+            popup2.cmbAddWords.Items.Add("Swedish");
+            popup2.cmbAddWords.Items.Add("English");
 
-            this.popup2.cmbAddWordsTranslated.Items.Add("Swedish");
-            this.popup2.cmbAddWordsTranslated.Items.Add("English");
+            popup2.cmbAddWordsTranslated.Items.Add("Swedish");
+            popup2.cmbAddWordsTranslated.Items.Add("English");
+
+            popup2.cmbAddWordsTranslated.Items.Add("faka u");
 
 
 
@@ -70,11 +72,12 @@ namespace PHPQuest
 
                 if (popup.textBox1.Text != string.Empty)
                 {
-                    fm.comboBox1.Items.Add(popup.textBox1.Text);
+
                     fm.comboBox2.Items.Add(popup.textBox1.Text);
                     fm.comboBox3.Items.Add(popup.textBox1.Text);
-                    this.popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
-                    this.popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
+                    popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
+                    popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
+                    this.popup2.cmbAddWordsTranslated.Items.Add("andré är ett äkcligt svinrajsdja");
                     popup.textBox1.Clear();
                 }
             }

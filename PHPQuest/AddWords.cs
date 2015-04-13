@@ -11,6 +11,9 @@ using PHPQuest.Controller;
 
 namespace PHPQuest
 {
+    /// <summary>
+    /// Denna form lägger man till ord och översättningar med
+    /// </summary>
     public partial class AddWords : Form
     {
         TimeTest timetest;
@@ -23,6 +26,11 @@ namespace PHPQuest
 
         WordList wordList;
 
+        /// <summary>
+        /// Knappen som lägger till rätt ord i rätt ordlista baserat på vilket index är selectat i dropdown-menyerna.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (cmbAddWords.SelectedIndex == 0 && cmbAddWordsTranslated.SelectedIndex != 0)
@@ -59,6 +67,11 @@ namespace PHPQuest
             }
             tbxAddNewWords.Clear();
             tbxAddMoreWords2.Clear();  
+        }
+
+        private void cmbAddWords_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

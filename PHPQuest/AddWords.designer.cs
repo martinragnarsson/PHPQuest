@@ -45,6 +45,7 @@
             this.cmbAddWords.Name = "cmbAddWords";
             this.cmbAddWords.Size = new System.Drawing.Size(121, 21);
             this.cmbAddWords.TabIndex = 0;
+            this.cmbAddWords.SelectedIndexChanged += new System.EventHandler(this.cmbAddWords_SelectedIndexChanged);
             // 
             // label1
             // 
