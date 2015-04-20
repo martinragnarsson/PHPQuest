@@ -74,6 +74,7 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="word.cs" />
     <EmbeddedResource Include="AddWords.resx">
       <DependentUpon>AddWords.cs</DependentUpon>
     </EmbeddedResource>

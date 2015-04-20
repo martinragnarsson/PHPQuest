@@ -8,8 +8,7 @@ namespace PHPQuest.Controller
 {
     class UserController
     {
-        int i = 0;
-        string namn;
+
         
     }
 }

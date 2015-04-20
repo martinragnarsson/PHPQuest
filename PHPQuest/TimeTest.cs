@@ -39,7 +39,7 @@ namespace PHPQuest
 
             fm.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             fm.Controls.Add(fm.comboBox1);
-            fm.comboBox1.Items.Add("Add language");
+            //fm.comboBox1.Items.Add("Add language");
             fm.comboBox1.Items.Add("Reset");
             fm.comboBox1.Items.Add("Save");
             fm.comboBox1.SelectedIndexChanged += new System.EventHandler(ComboBox1_DropDown);
@@ -59,7 +59,6 @@ namespace PHPQuest
             popup2.cmbAddWordsTranslated.Items.Add("Swedish");
             popup2.cmbAddWordsTranslated.Items.Add("English");
 
-            popup2.cmbAddWordsTranslated.Items.Add("faka u");
 
 
 
@@ -77,7 +76,6 @@ namespace PHPQuest
                     fm.comboBox3.Items.Add(popup.textBox1.Text);
                     popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
                     popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
-                    this.popup2.cmbAddWordsTranslated.Items.Add("andré är ett äkcligt svinrajsdja");
                     popup.textBox1.Clear();
                 }
             }
@@ -160,18 +158,16 @@ namespace PHPQuest
             {
                 lblWord.Text = wordList.Språk2[n];
             }
-            if (fm.comboBox2.SelectedIndex == 2)
-            {
-                lblWord.Text = wordList.Språk3[n];
-            }
-            if (fm.comboBox2.SelectedIndex == 3)
-            {
-                lblWord.Text = wordList.Språk4[n];
-            }
+            //if (fm.comboBox2.SelectedIndex == 2)
+            //{
+            //    lblWord.Text = wordList.Språk3[n];
+            //}
+            //if (fm.comboBox2.SelectedIndex == 3)
+            //{
+            //    lblWord.Text = wordList.Språk4[n];
+            //}
 
-
-
-            this.Update();
+           this.Update();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -184,9 +180,7 @@ namespace PHPQuest
                     tbxAnswer.BackColor = Color.Red;
                 }
                 btnSend.PerformClick();
-            }
-
-
+            }            
         }
 
         public void btnSend_Click(object sender, EventArgs e)
@@ -205,20 +199,20 @@ namespace PHPQuest
                     rightanswer = true;
                 }
             }
-            if (fm.comboBox3.SelectedIndex == 2)
-            {
-                if (tbxAnswer.Text == wordList.Språk3[n])
-                {
-                    rightanswer = true;
-                }
-            }
-            if (fm.comboBox3.SelectedIndex == 3)
-            {
-                if (tbxAnswer.Text == wordList.Språk4[n])
-                {
-                    rightanswer = true;
-                }
-            }
+            //if (fm.comboBox3.SelectedIndex == 2)
+            //{
+            //    if (tbxAnswer.Text == wordList.Språk3[n])
+            //    {
+            //        rightanswer = true;
+            //    }
+            //}
+            //if (fm.comboBox3.SelectedIndex == 3)
+            //{
+            //    if (tbxAnswer.Text == wordList.Språk4[n])
+            //    {
+            //        rightanswer = true;
+            //    }
+            //}
             if (rightanswer)
             {
                 tbxAnswer.BackColor = Color.White;
@@ -243,6 +237,20 @@ namespace PHPQuest
             tbxAnswer.ReadOnly = true;
             i = 20;
             lblCount.Text = i.ToString();
+        }
+
+        private void TimeTest_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeTest_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            tmrCount.Stop();
+            //i = 20;
+            //tmrMain.Stop();
+            this.Hide();
         }
 
     }

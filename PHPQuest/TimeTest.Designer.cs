@@ -161,6 +161,8 @@
             this.MaximizeBox = false;
             this.Name = "TimeTest";
             this.Text = "Glosor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TimeTest_FormClosing);
+            this.Load += new System.EventHandler(this.TimeTest_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
