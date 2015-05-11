@@ -36,10 +36,13 @@ namespace PHPQuest
             if (cmbAddWords.SelectedIndex == 0 && cmbAddWordsTranslated.SelectedIndex != 0)
             {
                 wordList.Språk1.Add(tbxAddNewWords.Text);
+                timetest.n++;
             }
             if (cmbAddWords.SelectedIndex == 1 && cmbAddWordsTranslated.SelectedIndex != 1)
             {
                 wordList.Språk2.Add(tbxAddNewWords.Text);
+
+                timetest.n++;
             }
             //if (cmbAddWords.SelectedIndex == 2 && cmbAddWordsTranslated.SelectedIndex != 2)
             //{
@@ -52,10 +55,12 @@ namespace PHPQuest
             if (cmbAddWordsTranslated.SelectedIndex == 0 && cmbAddWords.SelectedIndex != 0)
             {
                 wordList.Språk1.Add(tbxAddMoreWords2.Text);
+                timetest.n++;
             }
             if (cmbAddWordsTranslated.SelectedIndex == 1 && cmbAddWords.SelectedIndex != 1)
             {
                 wordList.Språk2.Add(tbxAddMoreWords2.Text);
+                timetest.n++;
             }
             //if (cmbAddWordsTranslated.SelectedIndex == 2 && cmbAddWords.SelectedIndex != 2)
             //{

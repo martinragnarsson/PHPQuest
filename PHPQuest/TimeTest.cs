@@ -19,7 +19,7 @@ namespace PHPQuest
         bool start = false;
         bool förstasparningen = false;
         int i = 20;
-        int n = 0;
+        public int n = 0;
         int points = 0;
         int fel = 0;
         FormMain fm;
@@ -65,21 +65,21 @@ namespace PHPQuest
         }
         private void ComboBox1_DropDown(object sender, System.EventArgs e)
         {
+            //if (fm.comboBox1.SelectedIndex == 2)
+            //{
+            //    DialogResult dialogresult = popup.ShowDialog();
+
+            //    if (popup.textBox1.Text != string.Empty)
+            //    {
+
+            //        fm.comboBox2.Items.Add(popup.textBox1.Text);
+            //        fm.comboBox3.Items.Add(popup.textBox1.Text);
+            //        popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
+            //        popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
+            //        popup.textBox1.Clear();
+            //    }
+            //}
             if (fm.comboBox1.SelectedIndex == 0)
-            {
-                DialogResult dialogresult = popup.ShowDialog();
-
-                if (popup.textBox1.Text != string.Empty)
-                {
-
-                    fm.comboBox2.Items.Add(popup.textBox1.Text);
-                    fm.comboBox3.Items.Add(popup.textBox1.Text);
-                    popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
-                    popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
-                    popup.textBox1.Clear();
-                }
-            }
-            if (fm.comboBox1.SelectedIndex == 1)
             {
                 lblCount.Text = "20";
                 i = 20;
@@ -88,7 +88,7 @@ namespace PHPQuest
                 tbxAnswer.ReadOnly = true;
                 points = 0;
             }
-            if (fm.comboBox1.SelectedIndex == 2)
+            if (fm.comboBox1.SelectedIndex == 1)
             {////////////////////////////////////////////////////////////////
 
                 string saving = System.IO.File.ReadAllText(@"L:\Patrik Grip\Gammalt\Martin Ragnarsson - TE2A\glosor\Save.txt");

@@ -58,8 +58,6 @@
     <Compile Include="TimeTest.Designer.cs">
       <DependentUpon>TimeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\Word.cs" />
     <Compile Include="PopupAddWords.cs">
       <SubType>Form</SubType>
     </Compile>
