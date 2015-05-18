@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using PHPQuest.Controller;
 
+
 namespace PHPQuest
 {
     public partial class TimeTest : Form
@@ -18,6 +19,7 @@ namespace PHPQuest
         bool rightanswer = false;
         bool start = false;
         bool förstasparningen = false;
+        int disabledcmd = 0;
         int i = 20;
         public int n = 0;
         int points = 0;
@@ -65,20 +67,7 @@ namespace PHPQuest
         }
         private void ComboBox1_DropDown(object sender, System.EventArgs e)
         {
-            //if (fm.comboBox1.SelectedIndex == 2)
-            //{
-            //    DialogResult dialogresult = popup.ShowDialog();
-
-            //    if (popup.textBox1.Text != string.Empty)
-            //    {
-
-            //        fm.comboBox2.Items.Add(popup.textBox1.Text);
-            //        fm.comboBox3.Items.Add(popup.textBox1.Text);
-            //        popup2.cmbAddWords.Items.Add(popup.textBox1.Text);
-            //        popup2.cmbAddWordsTranslated.Items.Add(popup.textBox1.Text);
-            //        popup.textBox1.Clear();
-            //    }
-            //}
+         
             if (fm.comboBox1.SelectedIndex == 0)
             {
                 lblCount.Text = "20";
@@ -220,7 +209,7 @@ namespace PHPQuest
 
         private void TimeTest_Load(object sender, EventArgs e)
         {
-
+            fm.DisableCbx(true);
         }
 
         private void TimeTest_FormClosing(object sender, FormClosingEventArgs e)
@@ -228,6 +217,10 @@ namespace PHPQuest
             e.Cancel = true;
             tmrCount.Stop();
             this.Hide();
+
+            fm.DisableCbx(false);
+
+            fm.disabledCmb = false;
         }
 
     }

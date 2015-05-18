@@ -17,11 +17,15 @@ namespace PHPQuest
         TimeTest tt;
         PopupAddWords popup = new PopupAddWords();
         AddWords popup2;
+
+        public bool disabledCmb = false;
         public FormMain()
         {
+
             popup2 = new AddWords(tt);
             InitializeComponent();
 
+            
 
             this.tt = new TimeTest(this);
 
@@ -30,11 +34,24 @@ namespace PHPQuest
 
             this.popup2.cmbAddWordsTranslated.Items.Add("Swedish");
             this.popup2.cmbAddWordsTranslated.Items.Add("English");
+
+            
+            
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-             
+            if (disabledCmb)
+            {
+                comboBox2.Enabled = false;
+                comboBox3.Enabled = false;
+            }
+            if (disabledCmb == false)
+            {
+                comboBox2.Enabled = true;
+                comboBox3.Enabled = true;
+            }
+            
         }
 
         /// <summary>
@@ -44,7 +61,10 @@ namespace PHPQuest
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            
             tt.Show();
+            disabledCmb = true;
+            
         }
 
         private void btnAddworderinos_Click(object sender, EventArgs e)
@@ -55,6 +75,20 @@ namespace PHPQuest
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void DisableCbx(bool disableCmb)
+        {
+            if (disableCmb)
+            {
+                comboBox2.Enabled = false;
+                comboBox3.Enabled = false;
+            }
+            if (disableCmb == false)
+            {
+                comboBox2.Enabled = true;
+                comboBox3.Enabled = true;
+            }
         }
     }
 }
