@@ -158,14 +158,6 @@ namespace PHPQuest
             {
                 lblWord.Text = wordList.Språk2[n];
             }
-            //if (fm.comboBox2.SelectedIndex == 2)
-            //{
-            //    lblWord.Text = wordList.Språk3[n];
-            //}
-            //if (fm.comboBox2.SelectedIndex == 3)
-            //{
-            //    lblWord.Text = wordList.Språk4[n];
-            //}
 
            this.Update();
         }
@@ -199,20 +191,7 @@ namespace PHPQuest
                     rightanswer = true;
                 }
             }
-            //if (fm.comboBox3.SelectedIndex == 2)
-            //{
-            //    if (tbxAnswer.Text == wordList.Språk3[n])
-            //    {
-            //        rightanswer = true;
-            //    }
-            //}
-            //if (fm.comboBox3.SelectedIndex == 3)
-            //{
-            //    if (tbxAnswer.Text == wordList.Språk4[n])
-            //    {
-            //        rightanswer = true;
-            //    }
-            //}
+
             if (rightanswer)
             {
                 tbxAnswer.BackColor = Color.White;
@@ -248,8 +227,6 @@ namespace PHPQuest
         {
             e.Cancel = true;
             tmrCount.Stop();
-            //i = 20;
-            //tmrMain.Stop();
             this.Hide();
         }
 

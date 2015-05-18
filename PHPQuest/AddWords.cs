@@ -12,7 +12,7 @@ using PHPQuest.Controller;
 namespace PHPQuest
 {
     /// <summary>
-    /// Denna form lägger man till ord och översättningar med
+    /// Denna form lägger man till ord och översättningar med.
     /// </summary>
     public partial class AddWords : Form
     {
@@ -44,14 +44,6 @@ namespace PHPQuest
 
                 timetest.n++;
             }
-            //if (cmbAddWords.SelectedIndex == 2 && cmbAddWordsTranslated.SelectedIndex != 2)
-            //{
-            //    wordList.Språk3.Add(tbxAddNewWords.Text);
-            //}
-            //if (cmbAddWords.SelectedIndex == 3 && cmbAddWordsTranslated.SelectedIndex != 3)
-            //{
-            //    wordList.Språk4.Add(tbxAddNewWords.Text);
-            //}
             if (cmbAddWordsTranslated.SelectedIndex == 0 && cmbAddWords.SelectedIndex != 0)
             {
                 wordList.Språk1.Add(tbxAddMoreWords2.Text);
@@ -62,14 +54,6 @@ namespace PHPQuest
                 wordList.Språk2.Add(tbxAddMoreWords2.Text);
                 timetest.n++;
             }
-            //if (cmbAddWordsTranslated.SelectedIndex == 2 && cmbAddWords.SelectedIndex != 2)
-            //{
-            //    wordList.Språk3.Add(tbxAddMoreWords2.Text);
-            //}
-            //if (cmbAddWordsTranslated.SelectedIndex == 3 && cmbAddWords.SelectedIndex != 3)
-            //{
-            //    wordList.Språk4.Add(tbxAddMoreWords2.Text);
-            //}
             tbxAddNewWords.Clear();
             tbxAddMoreWords2.Clear();  
         }
